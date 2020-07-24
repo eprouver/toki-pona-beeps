@@ -1,0 +1,66 @@
+body {
+  text-align: center;
+  font-size: 2.3vmin;
+  user-select: none;
+}
+#card {
+  line-height: 80vh;
+  transition: font-size 0.2s;
+  white-space: nowrap;
+}
+
+#card:before {
+  content:'⚪⚪⚪';
+  position: absolute;
+  top: 52vh;
+  left: 0;
+  width: 100%;
+  font-size: 12px;
+  color: black;
+  letter-spacing: 1.2em;
+  opacity: 0.3;
+}
+
+#card.emoji {
+  font-size: 16em;
+}
+
+#card.emoji:before {
+  content:'🔴⚫⚫';
+}
+
+.english {
+  font-size: 4em;
+  text-transform: capitalize;
+  color: #55f;
+  letter-spacing: -0.05em;
+}
+
+.toki-pona, .start {
+  font-size: 10em;
+  font-family: Arial, san-serif;
+  font-weight: bold;
+}
+
+.start {
+  color: #f85;
+}
+
+#card.start:before {
+  content:'(click for sound)';
+  letter-spacing: 1px;
+}
+
+#card.english:before {
+  content:'⚫⚫🔴';
+}
+
+#card.toki-pona:before {
+  content:'⚫🔴⚫';
+}
+
+.done {
+    text-transform: capitalize;
+    font-size: 0;
+    color: #55f;
+}
