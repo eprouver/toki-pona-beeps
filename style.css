@@ -2,6 +2,7 @@ body {
   text-align: center;
   font-size: 2.3vmin;
   user-select: none;
+  overflow: hidden;
 }
 #card {
   line-height: 80vh;
@@ -34,6 +35,27 @@ body {
   text-transform: capitalize;
   color: #55f;
   letter-spacing: -0.05em;
+  margin-top: 10vh;
+}
+
+#card.toki-pona {
+  margin-top: 10vh;
+  color: #f85;
+}
+
+#card.toki-pona:after, #card.english:after {
+  content: attr(lp);
+  font-family: linja-pona;
+  font-feature-settings: "liga" 1, "clig" 1, "calt" 1, "kern" 1, "mark" 1;
+  text-rendering: optimizeLegibility;
+  position: absolute;
+  font-size: 23vmin;
+  top: -10vh;
+  left: 0;
+  width: 100%;
+  color: black;
+  text-transform: none;
+  font-weight: bold;
 }
 
 .toki-pona, .start {

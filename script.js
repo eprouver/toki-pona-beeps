@@ -14,7 +14,7 @@ function beep(
     if (!sound) {
       return;
     }
-    
+
   var oscillator = audioCtx.createOscillator();
   var gainNode = audioCtx.createGain();
 
@@ -79,7 +79,7 @@ const emojis = [{
     english: ['or'],
   },
   {
-    emoji: '🌅',
+    emoji: '🔒',
     tokiPona: 'awen',
     english: ['stay', 'kept', 'protected', 'waiting', 'safe', 'to continue to'],
   },
@@ -262,7 +262,7 @@ const emojis = [{
   {
     emoji: '📁',
     tokiPona: 'lipu',
-    english: ['a flat thing', 'book', 'document', 'card', 'paper'], 
+    english: ['a flat thing', 'book', 'document', 'card', 'paper'],
   },
   {
     emoji: '❤️🧡',
@@ -680,11 +680,13 @@ const newStage = () => {
     case 1:
       card.innerHTML = currentWord.tokiPona;
       card.className = 'toki-pona';
+      card.setAttribute('lp', currentWord.tokiPona);
       beep(100, 200);
       break;
     case 2:
       card.innerHTML = currentWord.english[~~(Math.random() * currentWord.english.length)];
       card.className = 'english';
+      card.setAttribute('lp', currentWord.tokiPona);
       beep();
       if (backwards) {
         setTimeout(beep, 300);
